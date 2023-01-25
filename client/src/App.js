@@ -1,16 +1,19 @@
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import TodosList from "./component/todolist/TodosList";
+
 import "./App.css";
-import { useState, useEffect } from "react";
-import Loading from "./component/Loading";
 
 function App() {
-  const [todos, setTodos] = useState([]);
-  useEffect(() => {
-    axios.get("");
-  }, []); //[] only fire one time when the component loads
   return (
-    <div className="App">
-      <Loading />
-    </div>
+    <BrowserRouter>
+      <div className="app">
+        <Routes>
+          <Route exact path="/" element={<TodosList />} />
+          <Route exact path="/blog/:id" element={<Todos />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

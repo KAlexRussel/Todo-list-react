@@ -3,10 +3,10 @@ import React from "react";
 function Loading() {
   return (
     <div
-      class="spinner-border position-absolute top-50 start-50  "
+      className="spinner-border position-absolute top-50 start-50  "
       role="status"
     >
-      <span class="visually-hidden">Loading...</span>
+      <span className="visually-hidden">Loading...</span>
     </div>
   );
 }
