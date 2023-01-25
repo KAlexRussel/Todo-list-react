@@ -1,0 +1,28 @@
+.todolist {
+  display: flex;
+  flex-wrap: wrap;
+}
+.head {
+  margin: 5px auto;
+  width: fit-content;
+}
+.todo-input {
+  padding: 10px 20px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid gray;
+  outline: none;
+  width: 320px;
+  background: transparent;
+  /* color: #fff; */
+}
+
+.todo-button {
+  padding: 12px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background-color: gray;
+  color: #fff;
+  text-transform: capitalize;
+}

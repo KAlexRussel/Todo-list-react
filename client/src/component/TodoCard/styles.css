@@ -1,0 +1,15 @@
+.todoCard {
+  width: 180px;
+  background-color: grey;
+  margin: 5px;
+  padding: 5px;
+  color: white;
+  border-radius: 10px;
+}
+.task1 {
+  color: aquamarine;
+}
+.fa-trash {
+  display: flex;
+  justify-content: end;
+}

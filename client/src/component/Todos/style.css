@@ -1,0 +1,16 @@
+.cards {
+  width: 400px;
+  background-color: grey;
+  margin: 30px auto;
+  text-align: center;
+}
+.operations {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.deleteButton {
+  border: none;
+  color: red;
+  background-color: white;
+}
