@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TodosList from "./component/todolist/TodosList";
+import Todos from "./component/Todos/Todos";
 
 import "./App.css";
 
