@@ -23,20 +23,42 @@ const TodosList = () => {
         setPostData({
           ...postData,
           title: "",
+          completed: "false",
         });
+
         // navigate("/");
       })
       .catch((err) => {
         console.log("something when wrong");
       });
   };
+  const handleDelete = async (id) => {
+    if (window.confirm("do you really want to delete this blog?")) {
+      await axios
+        .delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
+        .then((res) => {
+          console.log(res);
+          console.log("deleted succesfully");
+          datagg();
+          setTimeout(() => {
+            window.location.reload();
+          }, 0);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+  };
   useEffect(() => {
+    datagg();
+  }, []); //fire only one time
+  // console.log(todos);
+  const datagg = () => {
     axios.get("https://jsonplaceholder.typicode.com/todos").then((res) => {
       const response = res.data;
       setTodos(response);
     });
-  }, []); //fire only one time
-  // console.log(todos);
+  };
 
   return (
     <>
@@ -57,9 +79,12 @@ const TodosList = () => {
       </div>
       {todos ? (
         <div className="todolist">
-          {todos.slice(0, 10).map((todo) => (
-            <TodoCard todo={todo} />
-          ))}
+          {todos
+            .slice(0, 20)
+            .reverse()
+            .map((todo) => (
+              <TodoCard todo={todo} handleDelete={handleDelete} />
+            ))}
         </div>
       ) : (
         <Loading />

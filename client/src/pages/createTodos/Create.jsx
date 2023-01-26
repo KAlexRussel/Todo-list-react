@@ -22,7 +22,16 @@ function Create() {
     <div className="cards">
       <Paper elevation={3}>
         <>
-          <h1>What's the Plan for Today?</h1>
+          <label htmlFor="">Title</label>
+          <input
+            placeholder="Add a todo"
+            // value={input}
+            onChange={handleChange}
+            name="text"
+            className="todo-input"
+            // ref={inputRef}
+          />
+          <label htmlFor="">complete</label>
           <input
             placeholder="Add a todo"
             // value={input}

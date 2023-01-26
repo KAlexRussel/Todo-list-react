@@ -1,15 +1,48 @@
 .todoCard {
   width: 180px;
-  background-color: grey;
+  background-color: rgba(13, 134, 210, 0.1);
   margin: 5px;
   padding: 5px;
-  color: white;
+  color: black;
   border-radius: 10px;
+  /* height: 100%;
+  min-height: 80px; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: 0.5s;
+}
+.todoCard:hover {
+  transform: scale(1.1);
 }
 .task1 {
-  color: aquamarine;
+  /* color: aquamarine; */
+  font-weight: bolder;
 }
 .fa-trash {
   display: flex;
   justify-content: end;
+  margin-top: auto;
+}
+.confirm {
+  display: flex;
+  color: green;
+  margin-top: auto;
+  justify-content: center;
+}
+.pending {
+  color: red;
+  margin-top: auto;
+}
+.fa-trash {
+  color: red;
+}
+.operationss {
+  display: flex;
+  margin-top: auto;
+  justify-content: end;
+  gap: 5px;
+}
+.fa-pen-square {
+  color: #181818;
 }

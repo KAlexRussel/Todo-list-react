@@ -1,16 +1,60 @@
-.cards {
-  width: 400px;
-  background-color: grey;
-  margin: 30px auto;
+.card2s {
+  width: 800px;
+  background-color: rgba(13, 134, 210, 0.1);
+  margin: 10px auto;
   text-align: center;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
 }
+.goback {
+  /* text-decoration: none; */
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  align-content: center;
+  margin: 5px 20px;
+  padding: 5p;
+}
+.goback1 {
+  align-items: center;
+  padding-top: 13px;
+}
+
 .operations {
   display: flex;
   justify-content: center;
   gap: 5px;
+  margin-top: auto;
 }
 .deleteButton {
   border: none;
   color: red;
-  background-color: white;
+  /* background-color: rgba(13, 134, 210, 0.1); */
+}
+.Task1 {
+  font-weight: bolder;
+}
+.task2 {
+  font-weight: bold;
+}
+.compp {
+  margin-top: auto;
+}
+.commp {
+  height: 30px;
+}
+/* .fa-check {
+}
+.fa-times-circle {
+  color: red;
+} */
+
+.completion {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
 }
