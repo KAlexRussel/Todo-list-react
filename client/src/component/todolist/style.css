@@ -6,6 +6,7 @@
 .head {
   margin: 5px auto;
   width: fit-content;
+  margin-bottom: 20px;
 }
 .todo-input {
   padding: 10px 20px;
@@ -16,7 +17,10 @@
   background: transparent;
   /* color: #fff; */
 }
-
+.inputButton {
+  display: flex;
+  justify-content: center;
+}
 .todo-button {
   padding: 12px;
   border: none;

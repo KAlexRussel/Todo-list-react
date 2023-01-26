@@ -22,7 +22,7 @@ function Todos() {
   //   });
   //   setTodos(updatedTodos);
   // };
-  const [comp, setComp] = useState(false);
+  const [comp, setComp] = useState();
 
   // useEffect(() => {
   //   completFfun();
@@ -95,8 +95,8 @@ function Todos() {
                 className="compp"
               >
                 <strong>Completed: </strong>
-                {/* {` ${todoDetails.completed}?`} */}
-                {comp ? "Yes" : "No"}
+                {` ${todoDetails.completed}`}
+                {/* {comp ? "Yes" : "No"} */}
               </p>
             </div>
             <div className="operations">

@@ -64,23 +64,27 @@ const TodosList = () => {
     <>
       <div className="head">
         <h1>What's the Plan for Today?</h1>
-        <input
-          autoComplete="off"
-          type={"text"}
-          placeholder="Add a todo"
-          value={postData.tittle}
-          onChange={(e) => setPostData({ ...postData, title: e.target.value })}
-          name="text"
-          className="todo-input"
-        />
-        <button className="todo-button" onClick={handleSubmit}>
-          Add todo
-        </button>
+        <div className="inputButton">
+          <input
+            autoComplete="off"
+            type={"text"}
+            placeholder="Add a todo"
+            value={postData.tittle}
+            onChange={(e) =>
+              setPostData({ ...postData, title: e.target.value })
+            }
+            name="text"
+            className="todo-input"
+          />
+          <button className="todo-button" onClick={handleSubmit}>
+            Add todo
+          </button>
+        </div>
       </div>
       {todos ? (
         <div className="todolist">
           {todos
-            .slice(0, 20)
+            .slice(0, 15)
             .reverse()
             .map((todo) => (
               <TodoCard todo={todo} handleDelete={handleDelete} />

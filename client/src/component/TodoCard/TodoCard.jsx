@@ -33,20 +33,23 @@ const TodoCard = ({ todo, handleDelete }) => {
   //   }
   // };
   return (
-    <div className="todoCard">
-      <div
-        onClick={() => {
-          navigate(`./todos/${id}`);
-        }}
-      >
-        <p className="task1">{`Todo Number:${id}`}</p>
-        <p>{title}</p>
-        <p className={comp ? "confirm" : "pending"}>
-          {comp ? `Completed: YES` : "Completed: NO"}
-        </p>
-      </div>
+    <div
+      className="todoCard"
+      onClick={() => {
+        navigate(`./todos/${id}`);
+      }}
+    >
+      {/* <div
+        
+      > */}
+      <p className="task1">{`Todo Number:${id}`}</p>
+      <p>{title}</p>
+      <p className={comp ? "confirm" : "pending"}>
+        {comp ? `Completed: YES` : "Completed: NO"}
+      </p>
+      {/* </div> */}
 
-      <div className="operationss">
+      {/* <div className="operationss">
         <Link to={`/editblog/${id}`}>
           <div>
             <i className="fas fa-pen-square"></i>
@@ -59,7 +62,7 @@ const TodoCard = ({ todo, handleDelete }) => {
             </button>
           </Link>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
